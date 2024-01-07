@@ -2,9 +2,6 @@
 
 int main()
 {
-    char a[] = "";
-    scanf("%s", a);
-    strrev(a);
-    printf("%s", a);
+    printf("Hello World");
     return 0;
 }
