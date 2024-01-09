@@ -44,5 +44,7 @@ int main()
     int reversedNum = atoi(numStr); // Convert the reversed string back to an integer
     printf("%d", reversedNum);
 
+    // We can find ascii values by using %d for a var in printf statement
+
     return 0; // Tells the end of the code
 }
