@@ -46,5 +46,9 @@ int main()
 
     // We can find ascii values by using %d for a character variable in printf statement
 
+    int num = 100;
+    char str[20];
+    sprintf(str, "%d", num); // Convert the integer to a string using sprintf
+
     return 0; // Tells the end of the code
 }
