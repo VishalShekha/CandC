@@ -1,7 +1,78 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <time.h>
 
-int main()
-{
+int fab(int n) {
+    int arr[n], nth = 0;
+    arr[0] = 0;
+    arr[1] = 1;
+    for(int i = 2;i < n; i++) {
+        arr[i] = arr[i-1] + arr[i-2];
+    }
+    for(int i = 0;i < n; i++) {
+        printf("%d ",arr[i]);
+    }
+    return 0;
+}
+
+int main() {
+
+    // Fibonacci series
+    int n;
+    printf("Enter the value of n : ");
+    scanf("%d",&n);
+    int arr[n];
+    fab(n);
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+int check() {    
+
+    // float cube(float n) volume of a cube
+    float i;
+    printf("Enter the number : ");
+    scanf("");
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+int mod1and2() {
     // Check is a number is odd or even
     // int num;
     // scanf("%d",&num);
@@ -10,17 +81,19 @@ int main()
     // }else {
     //     printf("Odd\n");
     // }
-
+    
+    
     // // Check if the character is vowel or consnant
     // char ch;
     // scanf("%c", &ch);
     // if (ch =='a'|| ch =="e"||ch =="i"||ch =="o"||ch =="u") {
     //     printf("Vowel\n");
-    // }
+    // } 
     // else {
     //     printf("Consonant\n");
     // }
 
+    
     // // // Check the max of three numbers using if and else
     // int a,b,c;
     // scanf("%d%d%d",&a,&b,&c);
@@ -32,7 +105,8 @@ int main()
     //     max = b;
     // }
     // printf("%d\n",max);
-
+    
+    
     // // Leap year. Use nested if else
     // int year;
     // scanf("%d",&year);
@@ -42,7 +116,8 @@ int main()
     // else {
     //     printf("Not Leap year\n");
     // }
-
+    
+    
     // // Voting age
     // int age;
     // scanf("%d",&age);
@@ -52,20 +127,22 @@ int main()
     // else {
     //     printf("Not Votable\n");
     // }
-
+    
     // // Calculate the sum of first 20 even numbers
     // int sum;
     // for (int i = 0 ; i <= 40 ; i +=2) {
     //     sum += i;
     // }
     // printf("%d",sum);
+    
 
+    
     // // Factorial using a for loop
     // int fact = 1,n;
     // scanf("%d",&n);
     // for (int i = 1 ; i<=n ; i++) {fact *= i;}
     // printf("%d",fact);
-
+    
     // // Prime number using for loop
     // int num ;
     // scanf("%d",&num);
@@ -76,7 +153,8 @@ int main()
     //     }
     // }
     // printf("Prime");
-
+    
+    
     // // Sum of digits of a number using while
     // int num,sum;
     // scanf("%d", &num);
@@ -85,7 +163,8 @@ int main()
     //     num /= 10;
     // }
     // printf("%d",sum);
-
+    
+    
     // // Print first 15 odd numbers
     // int sum = 0, i=1;
     // while (i<31) {
@@ -93,7 +172,7 @@ int main()
     //     i += 2;
     // }
     // printf("%d\n",sum);
-
+    
     //     // Factorial using while
     // int fact = 1,num;
     // scanf("%d",&num);
@@ -102,31 +181,31 @@ int main()
     //     num -=1 ;
     // }
     // printf("%d",fact);
-
+    
     // reverse the number
     // int num, rem, revnum = 0;
     // scanf("%d", &num);
     // do {
     //     rem = num % 10;
     //     revnum = (revnum * 10) + rem;
-    //     num /= 10;
+    //     num /= 10;    
     // } while(num > 0);
     // printf("%d",revnum);
-
+    
     // Palindrome Number Checker
     // int num, rem, revnum = 0;
     // scanf("%d", &num);
     // int numd = num;
     // do {
     //     revnum = (revnum * 10) + (num % 10);
-    //     num /= 10;
+    //     num /= 10;    
     // } while(num > 0);
     // if (numd==revnum) {
     //     printf("Palindrome!");
     //     return 0;
     // }
     // printf("!Palindrome");
-
+    
     // Prime numbers between 1 to 100
     // int num = 1,temp ;
     // do {
@@ -140,13 +219,14 @@ int main()
     //     }
     //     if (temp != 1) {
     //         printf("%d\n",num);
-
+            
     //     }
     //     temp = 0;
     // }while (num < 100);
-
+    
+    
     // Write a code to retrive Days of the week where 1 is Sunday , 2 is Monday and so on...
-
+    
     // int num ;
     // scanf("%d",&num);
     // switch (num) {
@@ -158,9 +238,9 @@ int main()
     //     case 6 : printf("Saturday"); break;
     //     case 7 : printf("Sunday"); break;
     //     default : printf("Error : out of days")
-
+        
     // }
-
+////////////////////////////////////////////////////////////mod2
     // Numbers to Roman
     // int num ;
     // scanf("%d",&num);
@@ -177,43 +257,34 @@ int main()
     //     case 10 : printf("X"); break;
     //     default : printf("Developer error: Out of awakat")
     // }
-
+    
     // Number to ASCII Number
     // char d;
     // scanf("%c",d);
     // printf("%d",d);
-
+    
     // Basic Calculator
-    int a, b;
-    char opt;
-    scanf("%d %d", &a, &b);
-    scanf("%c", opt);
+    // int a,b;
+    // char opt;
+    // scanf("%d %d",&a,&b);
+    // scanf("%c",opt);
+    
+    // switch (opt) {
+    //     case '+' : printf("\nSum is %d",a+b); break;
+    //     case '-' : printf("\nDifference is %d",a-b); break;
+    //     case '*' : printf("\nProduct is %d",a*b); break;
+    //     case '/' : printf("\nDivision is %d",a/b); break;
+    //     default : printf("\nEnter a normal program.");
+    // }
 
-    switch (opt)
-    {
-    case '+':
-        printf("\nSum is %d", a + b);
-        break;
-    case '-':
-        printf("\nDifference is %d", a - b);
-        break;
-    case '*':
-        printf("\nProduct is %d", a * b);
-        break;
-    case '/':
-        printf("\nDivision is %d", a / b);
-        break;
-    default:
-        printf("\nEnter a normal program.");
-    }
-    // Compile time intialization
+        // Compile time intialization
     // int a[] = {1,2,3,4,5,6,7,8,9,10};
     // int sum = 0;
     // for (int i = 0; i <= 10 ; i++) {
     //     sum += a[i];
     // }
     // printf("%d",sum);
-
+    
     // Runtime initialization
     // int size;
     // scanf("%d",&size);
@@ -223,7 +294,7 @@ int main()
     //     sum += a[i];
     // }
     // printf("%d",sum);
-
+    
     // To calculate the average in an array
     // int size;
     // scanf("%d",&size);
@@ -233,7 +304,7 @@ int main()
     //     sum += a[i];
     // }
     // printf("%f",(float)sum/size);
-
+    
     // Reverse the array
     // int size;
     // scanf("%d",&size);
@@ -250,75 +321,74 @@ int main()
     // for (int i = 0; i < size ; i++) {
     //     printf("%d ", a[i]);
     // }
-
-    // Elementwise multiplication
-    int ma[2][2], mb[2][2];
-    printf("Enter the A :");
-    scanf("%d %d %d %d", &ma[0][0], &ma[0][1], &ma[1][0], &ma[1][1]);
-    printf("Enter the B :");
-    scanf("%d %d %d %d", &mb[0][0], &mb[0][1], &mb[1][0], &mb[1][1]);
-    for (int i = 0; i < 2; i++)
-    {
-        for (int j = 0; j < 2; j++)
-        {
-            printf("%d\t", mb[i][j] * ma[i][j]);
-        }
-        printf("\n");
-    }
-
+    
+    // Elementwise multiplication 
+    // int ma[2][2] , mb[2][2] ;
+    // printf("Enter the A :");
+    // scanf("%d %d %d %d",&ma[0][0],&ma[0][1],&ma[1][0],&ma[1][1]);
+    // printf("Enter the B :");
+    // scanf("%d %d %d %d",&mb[0][0],&mb[0][1],&mb[1][0],&mb[1][1]);
+    // for (int i = 0 ; i<2 ; i++) {
+    //     for (int j = 0; j<2 ; j++) {
+    //         printf("%d\t", mb[i][j]*ma[i][j]);
+    //     }
+    //     printf("\n");
+    // }
+    
     // write a c program to calculate sum of rows and columns of a matrix
-    int r, c, rsum = 0;
-    printf("Enter the number of rows and columns: ");
-    scanf("%d%d", &r, &c);
-    int a[r][c], csum[c];
-    printf("Enter the elements : ");
-    for (int i = 0; i < r; i++)
-    {
-        for (int j = 0; j < c; j++)
-        {
-            scanf("%d", &a[i][j]);
-            csum[j] = 0;
-        }
-    }
-    for (int i = 0; i < r; i++)
-    {
-        for (int j = 0; j < c; j++)
-        {
-            printf("%d ", a[i][j]);
-            rsum += a[i][j];
-            csum[j] += a[i][j];
-        }
-        printf("  = %d\n", rsum);
-        rsum = 0;
-    }
-    printf("\n");
-    for (int i = 0; i < c; i++)
-    {
-        printf("%d ", csum[i]);
-    }
+    // int r, c, rsum = 0;
+    // printf("Enter the number of rows and columns: ");
+    // scanf("%d%d", &r, &c);
+    // int a[r][c], csum[c];
+    // printf("Enter the elements : ");
+    // for (int i = 0; i < r; i++)
+    // {
+    //     for (int j = 0; j < c; j++)
+    //     {
+    //         scanf("%d", &a[i][j]);
+    //         csum[j] = 0;
+    //     }
+    // }
+    // for (int i = 0; i < r; i++)
+    // {
+    //     for (int j = 0; j < c; j++)
+    //     {
+    //         printf("%d ", a[i][j]);
+    //         rsum += a[i][j];
+    //         csum[j] += a[i][j];
+    //     }
+    //     printf("  = %d\n", rsum);
+    //     rsum = 0;
+    // }
+    // printf("\n");
+    // for (int i = 0; i < c; i++)
+    // {
+    //     printf("%d ", csum[i]);
+    // }
 
     // input name, registration number and marks of students in 3 subjects. calculate average.
 
-    int n, i, j;
-    printf("Input number of students : ");
-    scanf("%d", &n);
-    char nm[n][20];
-    int reg[n], a, b, c;
-    float avg[n];
-    for (i = 1; i <= n; i = i + 1)
-    {
-        printf("\nEnter name: ");
-        scanf("%s", &nm[i]);
-        printf("Enter registration no: ");
-        scanf("%d", &reg[i]);
-        printf("Enter marks of student : ");
-        scanf("%d%d%d", &a, &b, &c);
-        avg[i] = (a + b + c) / 3;
-    }
-    for (i = 1; i <= n; i = i + 1)
-    {
-        printf("\nName : %s, Reg No : %d, Average marks : %.2f", nm[i], reg[i], avg[i]);
-    }
-
+    // int n, i, j;
+    // printf("Input number of students : ");
+    // scanf("%d", &n);
+    // char nm[n][20];
+    // int reg[n], a, b, c;
+    // float avg[n];
+    // for (i = 1; i <= n; i = i + 1)
+    // {
+    //     printf("\nEnter name: ");
+    //     scanf("%s", &nm[i]);
+    //     printf("Enter registration no: ");
+    //     scanf("%d", &reg[i]);
+    //     printf("Enter marks of student : ");
+    //     scanf("%d%d%d", &a, &b, &c);
+    //     avg[i] = (a + b + c) / 3;
+    // }
+    // for (i = 1; i <= n; i = i + 1)
+    // {
+    //     printf("\nName : %s, Reg No : %d, Average marks : %.2f", nm[i], reg[i], avg[i]);
+    // }
+            
     return 0;
+    
 }

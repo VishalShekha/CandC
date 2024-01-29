@@ -12,13 +12,14 @@ void update(int *a, int *b)
 int main()
 {
 
-    char ch;
-    scanf("%c", &ch);
-    printf("%c\n", ch);
-    char s[100];
-    scanf("%s", &s);
-    printf("%s\n", s);
-    char sent[100];
+    /* The spaces before %c in the scanf format string take care of skipping any whitespace characters, 
+    including the newline, and directly read the characters you input. */
+    char ch1,ch2;
+    printf("First : ");
+    scanf(" %c",&ch1);
+    printf("Second : ");
+    scanf(" v%c",&ch2);
+    printf("%c%c", ch1, ch2);
 
     // Getting a line as import
     scanf("\n");
@@ -49,6 +50,17 @@ int main()
     int num = 100;
     char str[20];
     sprintf(str, "%d", num); // Convert the integer to a string using sprintf
+
+    // Calling convention
+    int a = 1;
+    printf("%d %d %d",a,++a,a++); // It reads arguments from right to left, because of Stack memory
+
+    // Binary conditioning
+    // result = binaryCondition ? valueReturnedTrue : valueReturnedFalse
+    int v;
+    scanf("%d",&v);
+    int a = v==1 ? 1 : 0;
+    printf("%d",a);
 
     return 0; // Tells the end of the code
 }

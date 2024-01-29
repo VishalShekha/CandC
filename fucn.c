@@ -1,23 +1,48 @@
 #include <stdio.h>
 
-void helobolo(char name[], char heIS[], int fro)
-{
-    printf("%s is %s for a %d years", name, heIS, fro);
-}
+// Function prototype for helobolo
+void helobolo(char name[], char heIS[], int fro);
 
-double cube(int num); // this is called intiallizing
+// Function prototype for call by value
+double cubeByValue(double num);
+
+// Function prototype for call by reference
+void cubeByReference(double *num);
 
 int main()
 {
-    // Program code here
+    char name[] = "Vishal";
+    char heIS[] = "Not gay";
+    int fro = 100;
 
-    helobolo("Vishal", "Not gay", cube(100));
+    // Call by value example
+    printf("Call by value:\n");
+    helobolo(name, heIS, fro);
+    printf("\n");
 
-    return 0; // Indicate successful completion
+    // Call by reference example
+    printf("Call by reference:\n");
+    double cubeResult = 100.0;
+    cubeByReference(&cubeResult);
+    helobolo(name, heIS, (int)cubeResult);
+
+    return 0;
 }
 
-double cube(int num)
+// Function to print a message using the given name, status, and years
+void helobolo(char name[], char heIS[], int fro)
+{
+    printf("%s is %s for %d years\n", name, heIS, fro);
+}
+
+// Function to calculate the cube of a number using call by value
+double cubeByValue(double num)
 {
     return num * num * num;
-    // whatever code you write here is useless cause it breaks out of the function after return
+}
+
+// Function to calculate the cube of a number using call by reference
+void cubeByReference(double *num)
+{
+    *num = cubeByValue(100);
 }
